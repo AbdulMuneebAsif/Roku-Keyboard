@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="NewScreen" extends="Group" initialFocus = "KeyBoardExample">
+    <script type="text/brightscript" uri="NewScreen.brs" />
+    
+    <interface>
+        <field id = "content" type = "String" alwaysNotify = "true" />
+    </interface>
+
+
+    <children>
+        <Label 
+            id = "NewScreenLabel"
+            width = "1020"
+            translation = "[450, 350]"
+            text  = "  "
+        />
+        <Label 
+            id = "ViewtextLabel"
+            width = "1020"
+            translation = "[450, 615]"
+            text  = " Click the Button to View The Text "
+        />
+        
+        <Button 
+            id = "ClickHere" 
+            text = "Click Here"
+            MinWidth = "40"
+            height = "50"
+            translation = "[550, 550]"
+            showFocusFootprint = "true"
+            buttonSelected = "A"
+            focusable = "true"
+            renderTracking = "enabled"
+        
+
+        />
+    
+    </children>
+</component>

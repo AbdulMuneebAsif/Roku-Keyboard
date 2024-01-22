@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<component name="MainScene" extends="Scene" initialFocus = "KeyBoardExample">
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/KeyboardExampleLogic.brs" />
+
+    
+    <children>
+        <Overhang
+            id = "overhang"
+            showOptions = "false"
+            showClock = "false"
+            logoUri = "pkg:/images/hd_overhang_logo.png"
+            translation = "[0, 50]"
+        
+        />
+        <Label
+            id = "loadingIndicator"
+            text = "Loading...."
+            visible = "false"
+            width = "1020"
+            translation = "[350, 350]"
+        
+        />
+    </children>
+    
+</component>
