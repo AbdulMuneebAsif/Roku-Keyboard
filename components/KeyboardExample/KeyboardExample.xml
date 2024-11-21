@@ -1,40 +1,43 @@
-<?xml version = "1.0" encoding = "utf-8" ?> 
+<?xml version="1.0" encoding="utf-8"?>
 
-<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+<component name="KeyboardExample" extends="Group" initialFocus="Keyboard">
 
-<component name = "KeyboardExample" extends = "Group" initialFocus = "KeyboardExample" >
+  <interface>
+    <field id="userTyped" type="String" alwaysNotify="true" />
+  </interface>
 
-<interface>
-    <field id="userTyped" type="String" alwaysNotify = "true"/>
-</interface>
+  <script type="text/brightscript" uri="KeyboardExample.brs" />
 
-<script type="text/brightscript" uri="KeyboardExample.brs" />
-<script type="text/brightscript" uri="../UILogic/ScreenStackLogic.brs" />
+  <children>
 
-
-
-  <children >
-
-    <Keyboard 
-    
-        id = "KeyboardExample" 
-    
+    <miniKeyboard id="Keyboard"
+      translation="[100,100]"
     />
 
-    <Button 
-        id = "exampleButton" 
-        text = "OK"
-        MinWidth = "40"
-        height = "50"
-        translation = "[550, 550]"
-        showFocusFootprint = "true"
-        buttonSelected = "A"
-        focusable = "true"
-        renderTracking = "enabled"
-        
-
+    <Button id="OkBtn"
+      text=""
+      iconUri=""
+      focusedIconUri=""
+      focusFootprintBitmapUri="pkg:/images/OkBtn-unfocused.png"
+      focusBitmapUri="pkg:/images/OkBtn-focused.png"
+      minWidth="350"
+      maxWidth="350"
+      height="70"
+      translation="[120, 570]"
+      visible="true"
+      focusable="true"
+      showFocusFootprint="true"
     />
-    
+
+    <ScrollingLabel id="ScrollingLabel"
+      translation="[80,120]"
+      maxWidth="155"
+      font="font:SmallBoldSystemFont"
+      text=""
+      visible="true"
+      color="#FFFFFF"
+    />
+
   </children>
 
 </component>
