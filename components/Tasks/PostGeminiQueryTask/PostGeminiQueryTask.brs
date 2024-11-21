@@ -14,23 +14,29 @@ sub GetContent()
     xfer.SetMessagePort(port)
 
     data = {
-        "contents": [
-            { "parts": [
-                    {
-                        "text": m.top.query
-                        "role": "user"
-                    }
-                ]
+        "system_instruction": {
+            "parts": {
+                "text": "Give response as plain text only i.e. simple string format. Do not give markdown."
             }
-        ]
+        },
+        "contents": {
+            "parts": {
+                "text": m.top.query
+            }
+        }
     }
     xfer.AsyncPostFromString(FormatJson(data))
     msg = Wait(0, port)
+    code = msg.GetResponseCode()
+    print "code : " code
     rsp = msg.GetString()
+    print "rsp : " rsp
     rsp = ParseJson(rsp)
     if rsp <> invalid
-        m.top.content = rsp.candidates[0].content.parts[0].text
-        m.top.status = "OK"
+        if rsp.candidates[0].content <> invalid
+            m.top.content = rsp.candidates[0].content.parts[0].text
+            m.top.status = "OK"
+        end if
     else
         m.top.content = "something Went wrong. try again later."
         m.top.status = "ERROR"

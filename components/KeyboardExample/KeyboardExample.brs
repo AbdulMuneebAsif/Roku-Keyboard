@@ -6,6 +6,7 @@ end sub
 
 sub initializeItems()
     m.keyboard = m.top.FindNode("keyboard")
+    m.keyboard.TextEditBox.maxTextLength = 150
     m.OKBtn = m.top.FindNode("OKBtn")
     m.ScrollingLabel = m.top.FindNode("ScrollingLabel")
 end sub
@@ -35,6 +36,9 @@ function onKeyEvent(key as string, press as boolean) as boolean
             result = true
         else if key = "up"
             m.keyboard.setFocus(true)
+            result = true
+        else if key = "right"
+            m.ScrollingLabel.setFocus(true)
             result = true
         end if
     end if

@@ -29,22 +29,11 @@
       showFocusFootprint="true"
     />
 
-    <ScrollableText
-      id="ScrollableText"
-      text=""
-      scrollbarThumbBitmapUri="pkg:/images/.png"
-      translation="[370, 235]"
-      width="565"
-      height="308"
-      color="#ffffff"
-      font="font:SmallestSystemFont"
-      visible="true"
-    />
 
     <ScrollableText id="ScrollingLabel"
       translation="[600,120]"
       width="565"
-      height="608"
+      height="565"
       font="font:SmallestSystemFont"
       text="Welcome to Gemini Bot."
       visible="true"
