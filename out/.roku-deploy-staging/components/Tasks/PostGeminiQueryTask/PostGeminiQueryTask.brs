@@ -18,7 +18,6 @@ sub GetContent()
             { "parts": [
                     {
                         "text": m.top.query
-                        "role": "user"
                     }
                 ]
             }
