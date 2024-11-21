@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<component name="KeyboardExample" extends="Group" initialFocus="Keyboard">
+
+  <interface>
+    <field id="userTyped" type="String" alwaysNotify="true" />
+  </interface>
+
+  <script type="text/brightscript" uri="KeyboardExample.brs" />
+
+  <children>
+
+    <miniKeyboard id="Keyboard"
+      translation="[100,100]"
+    />
+
+    <Button id="OkBtn"
+      text=""
+      iconUri=""
+      focusedIconUri=""
+      focusFootprintBitmapUri="pkg:/images/OkBtn-unfocused.png"
+      focusBitmapUri="pkg:/images/OkBtn-focused.png"
+      minWidth="350"
+      maxWidth="350"
+      height="70"
+      translation="[120, 570]"
+      visible="true"
+      focusable="true"
+      showFocusFootprint="true"
+    />
+
+
+    <ScrollableText id="ScrollingLabel"
+      translation="[600,120]"
+      width="565"
+      height="565"
+      font="font:SmallestSystemFont"
+      text="Welcome to Gemini Bot."
+      visible="true"
+      color="#FFFFFF"
+    />
+
+  </children>
+
+</component>

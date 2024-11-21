@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<component name="MainScene" extends="Scene" initialFocus="KeyBoardExample">
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/KeyboardExampleLogic.brs" />
+
+</component>
