@@ -1,6 +1,5 @@
 sub Init()
-    m.top.backgroundColor = "0x68806876"
-    m.top.backgroundURI = "pkg:/images/hack.jpeg"
+    m.top.backgroundColor = "0x1bce2e"
 
     InitScreenStack()
     ShowKeyboardScreen()
